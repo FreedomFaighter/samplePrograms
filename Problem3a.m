@@ -30,7 +30,7 @@ for j = 1:(numberOfTIterations(2)-1)
 end
 ut3Forward(1:numberOfXIterations,1) =  u_x_0(x);
 for j = 1:(numberOfTIterations(3)-1)
-    for i = 2:20
+    for i = 2:21
         ut3Forward(i,j+1) = ut3Forward(i,j)+(alpha(3))*(ut3Forward(i-1,j) - 2*ut3Forward(i,j) + ut3Forward(i+1,j));
     end
 end

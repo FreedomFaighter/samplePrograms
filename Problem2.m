@@ -15,7 +15,7 @@ epsilon = [0.15; 0.22; 0.25];
 for e = 1:3
     for i = 2:N
         x(i,e) = x(i-1,e) + dt*y(i-1,e);
-        y(i,e) = x(i-1,e) - x(i-1,e)^3 - epsilon(e) * y(i-1,e) + gamma * cos(omega*dt*i-1);
+        y(i,e) = y(i-1,e) + dt*(x(i-1,e) - x(i-1,e)^3 - epsilon(e) * y(i-1,e) + gamma * cos(omega*t(i-1)));
     end
 end
 for e= 1:3
