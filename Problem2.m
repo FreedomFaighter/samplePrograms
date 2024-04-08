@@ -12,8 +12,10 @@ function = diffSolver(min=0,max=400,gamma = 0.3,omega = 1.0, N=10000)
         		y(i,e) = y(i-1,e) + dt*(x(i-1,e) - x(i-1,e)^3 - epsilon(e) * y(i-1,e) + gamma * cos(omega*t(i-1)));
     		end
 	end
+	hold on
 	for e= 1:3
     		figure
     		plot3(x(:,e),y(:,e),t);
 	end
+	hold off
 end
