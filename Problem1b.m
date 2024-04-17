@@ -23,5 +23,7 @@ function = numericalLaplacian(dx=0.1, dy=0.1, N=11, tol = 0.01, u_x_y = @(x,y) x
     		u = utemp;
     		k = k + 1;
 	end
+	hold on;
 	surf(u);
+	hold off;
 end

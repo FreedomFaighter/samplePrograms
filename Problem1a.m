@@ -16,6 +16,7 @@ function = secondLaplaceInParallel(N=100, tol = 1/1000, u_x_y = @(x,y) x*y+1)
     		end
     		k = k+1;
 	end
-
-surf(u(:,:,k));
+	hold on;
+	surf(u(:,:,k));
+	hold off;
 end
